@@ -109,6 +109,6 @@ public class BorrowerService {
 	}
 
 	public LibraryBranch findBranchById(Long branchId) {
-		return null;
+		return libraryBranchDAO.findById(branchId).orElseThrow(() -> new EntityNotFoundException("No such branch"));
 	}
 }
